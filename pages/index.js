@@ -24,7 +24,7 @@ export default function Home({ data }) {
     return (JSON.stringify(res)).match(user)
   })
   const searchedItem = useSelector((state) => state.cart.searchItems)
-  const actualdata = [...searchedItem].shift()
+  // const actualdata = searchedItem[0].data
   console.log('objectobjectobject,searcheddtaa', searchedItem)
   return (
     < >
@@ -32,43 +32,51 @@ export default function Home({ data }) {
       <div className="container">
         <div className='row'>
 
-          {user ?(
+          {user ? (
             searchedItem.length < 1 ?
               (filterData.map((p, id) => {
                 return (
-                  <div key={id} className='col-md-4 text-center'>
-                    <img src={p.img} style={{ width: "200px", height: "300px", borderRadius: '20px' }} />
-                    <h4>Title: {p.title}</h4>
-                    <h4>Description: {p.desc}</h4>
-                    <h4>Price: {p.price}</h4>
-                    <button className='btn btn-primary my-3' onClick={() => View(p)}>Add to cart</button>
-
-                  </div>
+                  
+                    <div key={id} className='col-md-4 text-center'>
+                      <Link href={`/${p.id}`}>
+                      <img src={p.img} style={{ width: "200px", height: "300px", borderRadius: '20px' }} />
+                      </Link>
+                      {/* <h4>Title: {p.title}</h4>
+                      <h4>Description: {p.desc}</h4> */}
+                      <h4>Price: {p.price}</h4>
+                      <button className='btn btn-outline-primary my-3'
+                        onClick={() => View(p)}>Add to cart</button>
+                    </div>
+                  
                 )
               })
               ) : (
                 searchedItem[0].data.map((p, id) => {
                   return (
+                    
                     <div key={id} className='col-md-4 text-center'>
-                      <img src={p.img} style={{ width: "200px", height: "300px", borderRadius: '20px' }} />
-                      <h4>Title: {p.title}</h4>
-                      <h4>Description: {p.desc}</h4>
+                      <Link href={`/${p.id}`}>
+                        <img src={p.img} style={{ width: "200px", height: "300px", borderRadius: '20px' }} />
+                        </Link>
+                      {/* <h4>Title: {p.title}</h4>
+                      <h4>Description: {p.desc}</h4> */}
                       <h4>Price: {p.price}</h4>
-                      <button className='btn btn-primary my-3' onClick={() => View(p)}>Add to cart</button>
+                      <button className='btn btn-outline-primary my-3' onClick={() => View(p)}>Add to cart</button>
 
                     </div>
+                    
                   )
                 })
-              )):(
-                <center className="m-5">
-                        <h3>Sorry...
-                            No user logged in yet.
-                        </h3>
+              )) : (
+            <center className="m-5">
+              <h3>Sorry...
+                No user logged in yet.
+              </h3>
 
-                        <h4>Please <a className="text-success" onClick={() => { history.push('/login') }}>click here</a> to login</h4>
-                    </center>
-              )
-              }
+              <h4>Please <a className="text-success" onClick={() => { history.push('/login') }}>click here</a> to login</h4>
+            </center>
+          )
+          }
 
         </div>
       </div>
