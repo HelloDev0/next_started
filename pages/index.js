@@ -4,11 +4,13 @@ import Image from "next/image"
 import Title from '../components/Title'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart, userLogin } from '../redux/actions/cartAction'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 
 export default function Home({ data }) {
 
   const dispatch = useDispatch()
+  const route=useRouter()
 
   const View = (p) => {
     console.log("object", p)
@@ -26,10 +28,13 @@ export default function Home({ data }) {
   const searchedItem = useSelector((state) => state.cart.searchItems)
   // const actualdata = searchedItem[0].data
   console.log('objectobjectobject,searcheddtaa', searchedItem)
+
+
   return (
     < >
       <Title title="Home" />
       <div className="container">
+      
         <div className='row'>
 
           {user ? (
@@ -43,7 +48,7 @@ export default function Home({ data }) {
                       </Link>
                       {/* <h4>Title: {p.title}</h4>
                       <h4>Description: {p.desc}</h4> */}
-                      <h4>Price: {p.price}</h4>
+                      <h4>Price: Rs.{p.price}.00</h4>
                       <button className='btn btn-outline-primary my-3'
                         onClick={() => View(p)}>Add to cart</button>
                     </div>
@@ -60,7 +65,7 @@ export default function Home({ data }) {
                         </Link>
                       {/* <h4>Title: {p.title}</h4>
                       <h4>Description: {p.desc}</h4> */}
-                      <h4>Price: {p.price}</h4>
+                      <h4>Price: Rs.{p.price}.00</h4>
                       <button className='btn btn-outline-primary my-3' onClick={() => View(p)}>Add to cart</button>
 
                     </div>
@@ -73,7 +78,7 @@ export default function Home({ data }) {
                 No user logged in yet.
               </h3>
 
-              <h4>Please <a className="text-success" onClick={() => { history.push('/login') }}>click here</a> to login</h4>
+              <h4>Please <a className="text-success" onClick={() => { route.push('/user/login') }}>click here</a> to login</h4>
             </center>
           )
           }

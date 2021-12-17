@@ -39,7 +39,7 @@ const pageno = ({ data }) => {
 
     return (
 
-        <>
+        <div>
             <div className='col-md text-center'>
                 <img src={data.img} style={{ width: "200px", height: "300px", borderRadius: '20px' }} />
                 <h4>Title: {data.title}</h4>
@@ -48,7 +48,7 @@ const pageno = ({ data }) => {
                 <button className='btn btn-primary my-3' onClick={() => View(data)}>Add to cart</button>
 
             </div>
-        </>
+        </div>
     )
 }
 

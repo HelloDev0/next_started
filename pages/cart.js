@@ -60,7 +60,7 @@ function cart() {
                                     <img src={p.img} style={{ width: "200px", height: "300px", borderRadius: '20px' }} />
                                     <h4>Title: {p.title}</h4>
                                     <h4>Description: {p.desc}</h4>
-                                    <h4>Price: {p.price}</h4>
+                                    <h4>Price: Rs.{p.price}.00</h4>
                                     <button className='btn btn-outline-danger my-3' onClick={() => Remove(p.id)}>Remove from cart</button>
 
                                 </div>
@@ -68,7 +68,7 @@ function cart() {
                         })}
                     </div>
                     <div className="col-md-4 my-5">
-                        <h3>Total Price: {total}</h3>
+                        <h3>Total Price: Rs.{total}.00</h3>
                         <button className="btn btn-outline-secondary"
                         onClick={checkOut}>Proceed to CheckOut</button>
                     </div>
