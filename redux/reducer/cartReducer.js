@@ -5,16 +5,16 @@ const CART_INITIAL_STATE = {
     searchItems: [
         // {title='something',desc:"A MAN"}
 
-        // {
-        //     createdAt: 1639039891855,
-        //     desc: "It was a book of thriller,magic and Action.",
-        //     id: "61b1c393ec054b955b53cab2",
-        //     img: "http://res.cloudinary.com/debiscloud/image/upload/v1639039891/16bfe71f-0733-42a4-89b8-1d49ff0ef1cf_n7gxkn.jpg",
-        //     price: "1080",
-        //     title: "the girl with,out name",
-        //     updatedAt: 1639039891855,
-        //     userId: "61b1ad1505a9f77ae2cd6d71",
-        // }
+        {
+            createdAt: 1639039891855,
+            desc: "It was a book of thriller,magic and Action.",
+            id: "61b1c393ec054b955b53cab2",
+            img: "http://res.cloudinary.com/debiscloud/image/upload/v1639039891/16bfe71f-0733-42a4-89b8-1d49ff0ef1cf_n7gxkn.jpg",
+            price: "1080",
+            title: "the girl with,out name",
+            updatedAt: 1639039891855,
+            userId: "61b1ad1505a9f77ae2cd6d71",
+        }
     ],
     user: ''
 };

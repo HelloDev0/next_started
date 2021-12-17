@@ -10,7 +10,7 @@ import { useRouter } from 'next/router'
 export default function Home({ data }) {
 
   const dispatch = useDispatch()
-  const route=useRouter()
+  const route = useRouter()
 
   const View = (p) => {
     console.log("object", p)
@@ -34,42 +34,42 @@ export default function Home({ data }) {
     < >
       <Title title="Home" />
       <div className="container">
-      
+
         <div className='row'>
 
           {user ? (
-            searchedItem.length < 1 ?
+            searchedItem.length <2?
               (filterData.map((p, id) => {
                 return (
-                  
-                    <div key={id} className='col-md-4 text-center'>
-                      <Link href={`/${p.id}`}>
+
+                  <div key={id} className='col-md-4 text-center'>
+                    <Link href={`/${p.id}`}>
                       <img src={p.img} style={{ width: "200px", height: "300px", borderRadius: '20px' }} />
-                      </Link>
-                      {/* <h4>Title: {p.title}</h4>
+                    </Link>
+                    {/* <h4>Title: {p.title}</h4>
                       <h4>Description: {p.desc}</h4> */}
-                      <h4>Price: Rs.{p.price}.00</h4>
-                      <button className='btn btn-outline-primary my-3'
-                        onClick={() => View(p)}>Add to cart</button>
-                    </div>
-                  
+                    <h4>Price: Rs.{p.price}.00</h4>
+                    <button className='btn btn-outline-primary my-3'
+                      onClick={() => View(p)}>Add to cart</button>
+                  </div>
+
                 )
               })
               ) : (
                 searchedItem[0].data.map((p, id) => {
                   return (
-                    
+
                     <div key={id} className='col-md-4 text-center'>
                       <Link href={`/${p.id}`}>
                         <img src={p.img} style={{ width: "200px", height: "300px", borderRadius: '20px' }} />
-                        </Link>
+                      </Link>
                       {/* <h4>Title: {p.title}</h4>
                       <h4>Description: {p.desc}</h4> */}
                       <h4>Price: Rs.{p.price}.00</h4>
                       <button className='btn btn-outline-primary my-3' onClick={() => View(p)}>Add to cart</button>
 
                     </div>
-                    
+
                   )
                 })
               )) : (
