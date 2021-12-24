@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import '../styles/globals.css'
+// import '@themesberg/flowbite'
 
 function MyApp({ Component, pageProps }) {
   return (<>
