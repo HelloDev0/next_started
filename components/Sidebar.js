@@ -5,13 +5,7 @@ const Sidebar = () => {
     return (
         <>
             <div className="md:hidden " style={{ fontFamily: "Roboto", fontWeight: 400 }}>
-                {/* <div className='flex'>
-                    <a><img src="https://app.doctegrity.com/static/media/logo.bbf7c725.svg" class="h-8 mx-3 mt-2" /></a>
-
-                    <button className="mobile-menu-button" >
-                        <a className="pt-2 pl-2 text-xl text-blue-600/100"><i class="fas fa-bars"></i></a>
-                    </button>
-                </div> */}
+                
                 <nav className="mt-3 ml-2">
                     <Link href={'/'}><a className='text-l text-gray-600/80 block py-4 5 px-4 hover:text-blue-500/100'><i class="fas fa-home"></i></a></Link>
                     <Link href={'/health'}><a className='text-l text-gray-600/80 block py-4 px-4 hover:text-blue-500/100'><i class="fas fa-syringe"></i></a></Link>
@@ -47,14 +41,7 @@ const Sidebar = () => {
             <div className="absolute inset-y-0 left-0 transform -translate-x-full
             md:relative md:translate-x-0 transition duration-200 ease-in-out "
             >
-                {/* <div className="flex">
-                    <div className='flex'>
-                        <a><img src="https://app.doctegrity.com/static/media/logo-dark.0ce46e93.svg" class="h-8 ml-2 mt-2" /></a>
-                        <a className="pt-2 pl-2 text-xl" ><i class="fas fa-bars"></i></a>
-
-                    </div>
-
-                </div> */}
+                
                 <nav >
                     <Link href={'/'}><a className='text-sm block pb-3 pt-6 text-gray-600/80 5 px-4 hover:text-blue-500/100 flex ml-3'><i class="fas fa-home pt-1"></i><p className="ml-3"> Dashboard</p></a></Link>
                     <Link href={'/health'}><a className='text-sm block py-3 text-gray-600/80 5 5 px-4 hover:text-blue-500/100 flex ml-3'><i class="fas fa-syringe pt-1"></i> <p className="pl-3">Health Record</p></a></Link>
