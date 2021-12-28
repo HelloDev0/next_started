@@ -1,26 +1,17 @@
 import Link from "next/link";
 import React from "react";
-import ApexCharts from "apexcharts"
+
+
+import dynamic from 'next/dynamic'
 
 const User = "debiprasad"
-if (typeof window !== "undefined") {
-const options = {
-  chart: {
-    type: 'bar'
-  },
-  series: [{
-    name: 'sales',
-    data: [30,40,45,50,49,60,70,91,125]
-  }],
-  xaxis: {
-    categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
-  }
-}
 
-const chart = new ApexCharts(document.querySelector("#chart"), options);
+const Linechart = dynamic(() => import('../components/admin/Linechart'), { ssr: false })
 
-chart.render();
-}
+const PieChart = dynamic(() => import("../components/admin/PieChart"), { ssr: false })
+let today = new Date().toLocaleDateString()
+
+console.log('here is the date', today)
 
 export default function Home() {
 
@@ -88,21 +79,48 @@ export default function Home() {
             <div className="col-span ml-5 p-5 bg-white rounded">
               <p><i class="fas fa-city bg-[#cfd5f6] text-blue-600/90 rounded-full p-2"></i>
                 <a className="text-sm font-medium ml-5">Companies</a></p>
-              <p className="text-2xl font-medium mt-5 text-gary-700/90">48</p>
+              <p className="text-2xl font-medium mt-5 text-gary-700/90">532</p>
             </div>
             <div className="col-span ml-5 p-5 bg-white rounded">
               <p><i class="fas fa-user-friends bg-[#cfd5f6] text-blue-600/90 rounded-full p-2"></i>
                 <a className="text-sm font-medium ml-5">Active Members</a></p>
-              <p className="text-2xl font-medium mt-5 text-gary-700/90">48</p>
+              <p className="text-2xl font-medium mt-5 text-gary-700/90">8251</p>
             </div>
           </div>
           <div className="grid grid-cols-3">
             <div className="col-span-2" id="chart">
-        
-            
+              <Linechart />
             </div>
             <div className="col-span">
+              <PieChart />
+            </div>
 
+          </div>
+          <div className="flex flex-row">
+            <div className="basis-2/3 grid grid-cols-3">
+              <div className="col-span-2 my-5 bg-white rounded p-3">
+                <p className="text-sm font-medium"><i class="fas fa-envelope bg-[#cfd5f6] p-2 rounded-full mr-2 text-blue-600"></i>
+                Send Welcome Email</p>
+                <div className="flex gap-5">
+                  <div className="mt-3">
+                    <a><p className="text-sm mt-2">From </p>
+                      <input type="date" className="mt-2 rounded p-[5px] text-sm" placeholder={today} /></a>
+                  </div>
+                  <div className="mt-3">
+                    <a><p className="text-sm mt-2">To </p>
+                      <input type="date" className="mt-2 rounded p-[5px] text-sm" placeholder="today" /></a>
+                  </div>
+                </div>
+                <a className="bg-blue-500/80 p-2 4 mt-5 float-right rounded text-white
+                hover:font-bold hover:bg-blue-600 text-sm">Send</a>
+              </div>
+              <div className="col-span my-5 bg-white rounded p-3 ml-5">
+                <p className="text-sm font-medium"><i class="fas fa-users bg-[#cfd5f6] p-2 rounded-full mr-2 text-blue-600"></i>Export Members</p>
+                <p className="mt-3 text-sm">Email</p>
+                <input type="text" className="rounded w-48 mt-2 p-[5px]" />
+                <a className="bg-blue-500/80 p-2 4 mt-5 float-right rounded text-white
+                hover:font-bold hover:bg-blue-600 text-sm">Extract</a>
+              </div>
             </div>
           </div>
         </div>
