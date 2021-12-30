@@ -9,11 +9,11 @@ const AdminLayout = ({children}) => {
             <Title />
             <Nav style={{fontFamily:'Poppins',fontWeight:300}}/>
             <div className="grid grid-cols-12 bg-gray-200/20 h-screen">
-                <div className="col-span-2 ">
+                <div className="lg:col-span-2 md:col-span-3 sm:col-span-1">
                     <AdminSidebar style={{fontFamily:"Poppins",fontWeight:300}}/>
                 </div>
                 
-                <div className="col-span-10 bg-gray-300/30 " style={{fontFamily:"Poppins",fontWeight:400}}> 
+                <div className="lg:col-span-10 md:col-span-9 sm:col-span-11 bg-gray-300/30 " style={{fontFamily:"Poppins",fontWeight:400}}> 
                     {children}
                 </div>
             </div>

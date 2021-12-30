@@ -22,7 +22,7 @@ const Linechart = () => {
             curve: 'straight'
         },
         title: {
-            text: 'Product Trends by Month',
+            text: 'Active Members Growth',
             align: 'left'
         },
         grid: {
