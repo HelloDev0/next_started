@@ -78,7 +78,7 @@ export default function Home() {
                 <a className="text-sm font-medium ml-5">Groups</a></p>
               <p className="text-2xl font-medium mt-5 text-gary-700/90">48</p>
             </div>
-            <div className="lg:col-span-1  ml-5 p-5 bg-white rounded 
+            <div className="lg:col-span-1  ml-5 p-5 bg-white rounded
             sm:col-span-5 mt-2 ">
               <p><i class="fas fa-city bg-[#cfd5f6] text-blue-600/90 rounded-full p-2"></i>
                 <a className="text-sm font-medium ml-5">Companies</a></p>
@@ -105,14 +105,14 @@ export default function Home() {
               <div className="col-span-2 my-5 bg-white rounded p-3">
                 <p className="text-sm font-medium"><i class="fas fa-envelope bg-[#cfd5f6] p-2 rounded-full mr-2 text-blue-600"></i>
                 Send Welcome Email</p>
-                <div className="md:flex-row lg:flex-row gap-5 sm:flex-col">
+                <div className="md:flex-row lg:flex gap-5 sm:flex-col">
                   <div className="mt-3">
                     <a><p className="text-sm mt-2">From </p>
-                      <input type="date" className="mt-2 rounded p-[5px] text-sm" placeholder={today} /></a>
+                      <input type="date" className="mt-2 rounded p-[5px] text-sm lg:w-40" placeholder={today} /></a>
                   </div>
                   <div className="mt-3">
                     <a><p className="text-sm mt-2">To </p>
-                      <input type="date" className="mt-2 rounded p-[5px] text-sm" placeholder="today" /></a>
+                      <input type="date" className="mt-2 rounded p-[5px] text-sm  lg:w-40" placeholder="today" /></a>
                   </div>
                 </div>
                 <a className="bg-blue-500/80 p-2 4 mt-5 float-right rounded text-white

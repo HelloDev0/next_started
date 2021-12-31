@@ -25,7 +25,7 @@ const PieChart = () => {
     return (
         <>
             <div id="chart" className='py-10 bg-white rounded mt-5 ml-5'>
-                <ReactApexChart options={options} series={series} type="donut"  height={400}/>
+                <ReactApexChart options={options} series={series} type="donut"  height={320}/>
             </div>
         </>
     )

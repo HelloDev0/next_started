@@ -13,7 +13,7 @@ const rxprescriptionlist = () => {
                 <div className='lg:col-span-1 sm:col-span-4'>
                     <Menu as="div" className=''>
                         <Menu.Button className="text-left ml-7 text-sm text-gray-600/80 hover:text-blue-500/100">
-                            <p className='border border-gray-400 rounded py-2 pr-48 pl-2 bg-white   '>All <i class="fas fa-chevron-down"></i></p>
+                            <p className='border border-gray-400 rounded py-2 w-48 pl-2 bg-white   '><a className="mr-36">All</a> <i class="fas fa-chevron-down"></i></p>
                         </Menu.Button>
                         <Menu.Items className='text-sm ml-14 my-2 text-gray-600/80 '>
                             <Menu.Item as="div" className="hover:text-blue-500/100 my-2">
@@ -31,7 +31,7 @@ const rxprescriptionlist = () => {
                 <div className='lg:col-span-1 sm:col-span-4 '>
                     <Menu as="div" className=''>
                         <Menu.Button className="text-left ml-7 text-sm text-gray-600/80 hover:text-blue-500/100">
-                            <p className='border border-gray-400 rounded py-2 pr-48 pl-2 bg-white   '>All <i class="fas fa-chevron-down"></i></p>
+                            <p className='border border-gray-400 rounded py-2 w-48 pl-2 bg-white   '><a className="mr-36">All</a> <i class="fas fa-chevron-down"></i></p>
                         </Menu.Button>
                         <Menu.Items className='text-sm ml-14 my-2 text-gray-600/80 '>
                             <Menu.Item as="div" className="hover:text-blue-500/100 my-2">
@@ -49,17 +49,17 @@ const rxprescriptionlist = () => {
             </div>
             <div className="grid grid-cols-12 bg-white m-5 rounded">
                 <div className='col-span-12 m-5 bg-white md:hidden lg:table sm:hidden'>
-                    <table className='table-auto w-full '>
+                    <table className='table-auto '>
                         <thead className='bg-gray-900/10 rounded'>
                             <tr>
-                                <th className='py-4 text-left pl-3 text-xs'>#</th>
-                                <th className='py-4 text-left pl-1 text-xs'>Member Name</th>
-                                <th className='py-4 text-left pl-1 text-xs'>Pharmacy</th>
-                                <th className='py-4 text-left pl-1 text-xs'>State</th>
-                                <th className='py-4 text-left pl-1 text-xs'>Submission Date</th>
-                                <th className='py-4 text-left pl-1 text-xs'>RxID</th>
-                                <th className='py-4 text-left pl-1 text-xs'>Archive</th>
-                                <th className='pr-4 py-4 text-left pl-1 text-xs'>Script ID</th>
+                                <th className='py-3 text-left pl-3 text-xs'>#</th>
+                                <th className='py-3 text-left pl-1 text-xs'>Member Name</th>
+                                <th className='py-3 text-left pl-1 text-xs'>Pharmacy</th>
+                                <th className='py-3 text-left pl-1 text-xs'>State</th>
+                                <th className='py-3 text-left pl-1 text-xs'>Submission Date</th>
+                                <th className='py-3 text-left pl-1 text-xs'>RxID</th>
+                                <th className='py-3 text-left pl-0 text-xs'>Archive</th>
+                                <th className='py-3 text-left pl-1 text-xs'>Script ID</th>
                             </tr>
                         </thead>
                         <tbody className=''>

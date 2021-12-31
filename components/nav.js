@@ -11,13 +11,14 @@ const Nav = () => {
     // })
     const [sidebar, setSidebar] = useState(false)
     const viewBar = () => {
-        setSidebar(!sidebar)
+        console.log("for sidebar")
+        setSidebar(!sideBar)
     }
 
     return (
         <div className='relative flex justify-between bg-gary-400/10'>
             {/* mobile menu */}
-            <div className="md:hidden">
+            <div className="md:hidden sidebar">
                 <div className='flex m-2'>
                     <a><img src="https://app.doctegrity.com/static/media/logo.bbf7c725.svg" class="h-6 mx-3 mt-2" /></a>
                     <button className="mobile-menu-button" onClick={viewBar}>
@@ -30,12 +31,12 @@ const Nav = () => {
 
             </div>
             {/* sidebar */}
-            <div className='bg-white h-15 space-y-6 px-2 bg-gary-400/10
+            <div className='sidebar bg-white h-15 space-y-6 px-2 bg-gary-400/10
             absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out'>
                 
                     <div className='flex mx-3 my-2'>
                         <a><img src="https://app.doctegrity.com/static/media/logo-dark.0ce46e93.svg" class="h-6 ml-2 mt-2" /></a>
-                        <a className="pt-2 pl-4 text-l text-blue-500/100" ><i class="fas fa-bars"></i></a>
+                        <button className="pt-2 pl-16 text-l text-blue-500/100" onClick={viewBar} ><i class="fas fa-bars"></i></button>
 
                     </div>
 
